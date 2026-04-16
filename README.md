@@ -33,6 +33,25 @@ Mini design system in **React** + **TypeScript** + **Vite**, documented with **S
 
 **Note:** The MCP server is served by the Storybook dev process. A static deploy (e.g. Vercel) is for browsing the catalog; remote MCP for teams is available via Chromatic or self-hosted `@storybook/mcp` (see [Storybook docs](https://storybook.js.org/docs/ai/mcp/sharing)).
 
+## Figma (MCP)
+
+Archivo del capture + **sistema de variables y componentes** alineados con [`src/styles/tokens.css`](src/styles/tokens.css):
+
+**[Abrir en Figma](https://www.figma.com/design/lWg4pLV6WIkOUPktJKkifS)**
+
+| Página / nodo | Contenido |
+| --- | --- |
+| **Mistorybook / Components** | Colección **Mistorybook / Tokens** (modos **Light** / **Dark**) con colores semánticos, `space/*`, `radius/*`, `font-size/*` enlazables. |
+| **DS / Badge** | Propiedad `Variant` → Neutral, Success, Warning, Danger (fills y tipografía ligados a variables). |
+| **DS / Button** | `Variant` × `Size` (12 variantes); Ghost con borde `color/border`. |
+| **DS / Card** | `Variant` × `Padding` (Elevated / Outline / Ghost × none / sm / md). |
+| **DS / Footer** | `Variant` → default, subtle, minimal. |
+| **DS / Input** | `State` → Default, Error, Disabled, Small. |
+| **DS / Heading** | `Level` → 1, 2, 3 (tamaños de fuente por variable). |
+| **DS / Text** | `Tone` × tamaño (default / muted / danger). |
+
+Los nombres de variables siguen el prefijo del token CSS (`color/primary`, `space/4`, etc.). Las sombras del CSS no se duplican como variables de efecto en Figma (solo color, espacio, radio y tamaños de fuente).
+
 ## Deploy on Vercel
 
 **Producción (Storybook estático):** [https://mistorybook.vercel.app](https://mistorybook.vercel.app)

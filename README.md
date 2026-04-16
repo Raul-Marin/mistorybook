@@ -7,6 +7,7 @@ Mini design system in **React** + **TypeScript** + **Vite**, documented with **S
 - Foundations: CSS custom properties in [`src/styles/tokens.css`](src/styles/tokens.css) (color, typography, spacing, radius, shadow).
 - Components: **Button**, **Text** (+ **Heading**), **Badge**, **Card**, **Input**, **Footer** (+ **FooterCode** / **FooterLink**) — variants via props + CSS Modules.
 - Storybook: CSF 3, Docs, a11y, Vitest browser tests for stories, `@storybook/addon-mcp`.
+- Cursor: reglas en [`.cursor/rules/`](.cursor/rules/) y skills en [`.cursor/skills/`](.cursor/skills/) para escalar componentes, sync Figma y release (ver también [`AGENTS.md`](./AGENTS.md)).
 
 ## Scripts
 

@@ -1,0 +1,12 @@
+---
+description: Sincronización Figma MCP — variables y component sets alineados al repo
+globs: "src/styles/tokens.css,README.md"
+alwaysApply: false
+---
+
+# Figma (MCP)
+
+- **Archivo**: URL y convenciones en [README — Figma](README.md). Trabajar siempre contra el `fileKey` documentado salvo que el usuario indique otro.
+- **Herramientas**: `use_figma` (Plugin API) para variables y componentes; `generate_figma_design` solo para **captura HTML** (showcase localhost o URL). Cargar la skill del proyecto **mistorybook-figma-ds-sync** antes de scripts grandes.
+- **Variables**: colección `Mistorybook / Tokens`, modos Light/Dark; nombres `color/…`, `space/…`, `radius/…`, `font-size/…`; scopes válidos Figma (evitar `PADDING`; no mezclar `ALL_FILLS` con otros fill scopes).
+- **Componentes**: prefijo `DS /`, props como en código (`Variant`, `Size`, `State`, etc.); enlazar fills/padding/radius a variables existentes; scripts **incrementales** y `return` con IDs creados.

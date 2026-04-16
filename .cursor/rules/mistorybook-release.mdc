@@ -1,0 +1,12 @@
+---
+description: CI, Vercel y checklist antes de merge o deploy Mistorybook
+globs: "vercel.json,.github/**/*.yml,package.json"
+alwaysApply: false
+---
+
+# Release y deploy
+
+- **Calidad local**: `npm run lint && npm run build && npm run build-storybook && npm run test:storybook` antes de push a `main`.
+- **Vercel**: [`vercel.json`](vercel.json) usa `framework: null`, `build-storybook` → `storybook-static`. Producción documentada en README; previews por PR si el proyecto sigue enlazado en Vercel.
+- **CI**: [`.github/workflows/ci.yml`](.github/workflows/ci.yml) debe seguir pasando; no desactivar pasos de Playwright/Vitest sin sustituto.
+- **Git**: mensajes `feat|fix|docs|chore(scope): …` en una línea + cuerpo opcional; no commitear `node_modules`, `dist`, `storybook-static`, `.vercel`.

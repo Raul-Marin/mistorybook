@@ -15,3 +15,8 @@ If a prop is not documented in Storybook, do not assume it exists; ask the maint
 ## Local MCP endpoint
 
 With the dev server on the default port, the MCP server is at `http://localhost:6006/mcp`. Register it in your MCP client (see [README](./README.md)).
+
+## Automatización del repo (Cursor)
+
+- **Rules** (siempre o por glob): [`.cursor/rules/`](.cursor/rules/) — `mistorybook-core`, `mistorybook-storybook`, `mistorybook-release`, `mistorybook-figma`.
+- **Skills** (léelos ante tareas repetibles): [`.cursor/skills/`](.cursor/skills/) — `mistorybook-add-component`, `mistorybook-figma-ds-sync`, `mistorybook-ship`.

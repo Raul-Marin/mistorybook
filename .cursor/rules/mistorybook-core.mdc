@@ -1,0 +1,11 @@
+---
+description: Mistorybook — stack, tokens como fuente de verdad y convenciones globales del DS
+alwaysApply: true
+---
+
+# Mistorybook (núcleo)
+
+- **Tokens**: única fuente de color/tipografía/espaciado en [`src/styles/tokens.css`](src/styles/tokens.css). Los componentes consumen variables CSS (`var(--color-…)`, `var(--space-…)`); no hardcodear hex en módulos salvo casos excepcionales documentados.
+- **Componentes**: carpeta `src/components/<Nombre>/` con `Nombre.tsx`, `Nombre.module.css`, `Nombre.stories.tsx`. Export público en [`src/index.ts`](src/index.ts). Props tipadas; variantes con `clsx` y clases del módulo.
+- **Storybook 10 + MCP**: al tocar UI, priorizar herramientas MCP documentadas en [`AGENTS.md`](AGENTS.md). No inventar props no documentadas en stories/docs.
+- **Automatización**: para flujos repetibles (nuevo componente, captura Figma, release), seguir las skills del proyecto en [`.cursor/skills/`](.cursor/skills/) (léelas cuando el usuario pida escalar, sincronizar o publicar).

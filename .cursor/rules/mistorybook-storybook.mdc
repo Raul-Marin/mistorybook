@@ -1,0 +1,12 @@
+---
+description: Storybook 10 — stories, tests y addons del proyecto Mistorybook
+globs: "**/*.stories.tsx,.storybook/**"
+alwaysApply: false
+---
+
+# Storybook
+
+- **Formato**: CSF 3 (`satisfies Meta<typeof Component>`), `tags: ['autodocs']`, `parameters.layout` acorde al componente.
+- **Estilos**: importar tokens en [`.storybook/preview.ts`](.storybook/preview.ts) si añades superficies nuevas; no duplicar paleta fuera de `tokens.css`.
+- **Tests**: proyecto Vitest `storybook`; añadir `play` con `storybook/test` cuando haya interacción crítica. Tras cambios: `npm run test:storybook`.
+- **Addons**: no quitar `@storybook/addon-mcp`, `addon-docs`, `addon-a11y`, `addon-vitest` sin consenso; el MCP expone `/mcp` en dev (puerto 6006).

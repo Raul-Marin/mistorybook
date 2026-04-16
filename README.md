@@ -35,9 +35,11 @@ Mini design system in **React** + **TypeScript** + **Vite**, documented with **S
 
 ## Deploy on Vercel
 
-1. Import this Git repository in [Vercel](https://vercel.com).
-2. Use the included [`vercel.json`](./vercel.json): build runs `npm run build-storybook` and publishes the `storybook-static` directory.
-3. Production and preview URLs will update on each push / PR.
+**Producción (Storybook estático):** [https://mistorybook.vercel.app](https://mistorybook.vercel.app)
+
+1. El proyecto está enlazado en Vercel (`raul-marins-projects/mistorybook`) y conectado al repo de GitHub.
+2. [`vercel.json`](./vercel.json) fija `framework: null`, `npm run build-storybook` y salida `storybook-static`.
+3. Cada push a la rama principal (y PRs) generan despliegue automático si el proyecto sigue conectado en el dashboard de Vercel.
 
 ## CI
 

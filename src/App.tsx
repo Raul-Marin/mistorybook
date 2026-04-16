@@ -3,6 +3,9 @@ import {
   Badge,
   Button,
   Card,
+  Footer,
+  FooterCode,
+  FooterLink,
   Heading,
   Input,
   Text,
@@ -204,17 +207,53 @@ function App() {
             </div>
           </Card>
         </ShowcaseSection>
+
+        <ShowcaseSection
+          id="footer"
+          title="Footer"
+          description="Pie de página con variantes de superficie y utilidades de enlace/código."
+        >
+          <div className="showcase-panel showcase-footer-preview">
+            <Caption>Variante default (misma que el pie global)</Caption>
+            <Footer variant="default">
+              <Text as="p" size="small" tone="muted">
+                Preview embebido del componente <FooterCode>Footer</FooterCode>.
+              </Text>
+            </Footer>
+          </div>
+          <div className="showcase-panel showcase-footer-preview">
+            <Caption>Subtle y minimal</Caption>
+            <div className="showcase-footer-stack">
+              <Footer variant="subtle">
+                <Text as="p" size="small" tone="muted">
+                  Subtle — fondo <FooterCode>--color-bg</FooterCode>.
+                </Text>
+              </Footer>
+              <Footer variant="minimal">
+                <Text as="p" size="small" tone="muted">
+                  Minimal — sin borde ni fondo de superficie.
+                </Text>
+              </Footer>
+            </div>
+          </div>
+        </ShowcaseSection>
       </main>
 
-      <footer className="showcase-footer">
+      <Footer variant="default">
         <Text as="p" size="small" tone="muted">
-          Ver documentación interactiva en{' '}
-          <code className="showcase-code">npm run storybook</code> →{' '}
-          <a href="http://localhost:6006" className="showcase-link">
-            localhost:6006
-          </a>
+          Ver documentación interactiva en <FooterCode>npm run storybook</FooterCode>{' '}
+          →{' '}
+          <FooterLink href="http://localhost:6006">localhost:6006</FooterLink>
+          {' · '}
+          <FooterLink
+            href="https://mistorybook.vercel.app"
+            target="_blank"
+            rel="noreferrer"
+          >
+            Storybook en Vercel
+          </FooterLink>
         </Text>
-      </footer>
+      </Footer>
     </div>
   )
 }

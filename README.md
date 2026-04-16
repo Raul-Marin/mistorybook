@@ -5,7 +5,7 @@ Mini design system in **React** + **TypeScript** + **Vite**, documented with **S
 ## Stack
 
 - Foundations: CSS custom properties in [`src/styles/tokens.css`](src/styles/tokens.css) (color, typography, spacing, radius, shadow).
-- Components: **Button**, **Text** (+ **Heading**), **Badge**, **Card**, **Input** — variants via props + CSS Modules.
+- Components: **Button**, **Text** (+ **Heading**), **Badge**, **Card**, **Input**, **Footer** (+ **FooterCode** / **FooterLink**) — variants via props + CSS Modules.
 - Storybook: CSF 3, Docs, a11y, Vitest browser tests for stories, `@storybook/addon-mcp`.
 
 ## Scripts
